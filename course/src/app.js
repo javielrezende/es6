@@ -1,3 +1,4 @@
+// ----------Aula ARROWS FUNCTION----------------------------------------------------------------------
 // ----------PRIMEIRO EXEMPLO SEM ES6----------------------------------------------------------------------
 /*
 // A boa pratica diz que temos que criar as variaveis com _ antes do eu nome
@@ -49,7 +50,7 @@ color();
 
 
 // ----------TERCEIRO EXEMPLO PRIMEIRO EX DE CIMA COM ES6----------------------------------------------------------------------
-var bob = {
+/*var bob = {
     _name: "Bob",
     _friends: ["Guilherme", "Camila", "Murilo"],
     printFriends: function printFriends(){
@@ -60,5 +61,31 @@ var bob = {
     }
 };
 bob.printFriends();
-
+*/
 // ----------FIM TERCEIRO EXEMPLO------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+// ----------Aula CLASS----------------------------------------------------------------------
+class Color{
+    constructor(codeColor, nameColor){
+        // atributo
+        this.codeColor = codeColor;
+        this.nameColor = nameColor;
+    }
+
+    // Método retornando um objeto
+    getColor(){
+        return {codeColor: this.codeColor, nameColor: this.nameColor};
+    }
+}
+
+// let no es6 é utilizado para criar variaveis pertecentes ao scope
+let red = new Color("red", "Red");
+console.log(red.getColor());

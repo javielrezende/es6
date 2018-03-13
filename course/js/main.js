@@ -1,5 +1,10 @@
 "use strict";
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// ----------Aula ARROWS FUNCTION----------------------------------------------------------------------
 // ----------PRIMEIRO EXEMPLO SEM ES6----------------------------------------------------------------------
 /*
 // A boa pratica diz que temos que criar as variaveis com _ antes do eu nome
@@ -49,19 +54,46 @@ color();
 
 
 // ----------TERCEIRO EXEMPLO PRIMEIRO EX DE CIMA COM ES6----------------------------------------------------------------------
-var bob = {
+/*var bob = {
     _name: "Bob",
     _friends: ["Guilherme", "Camila", "Murilo"],
-    printFriends: function printFriends() {
-        var _this = this;
-
+    printFriends: function printFriends(){
         // Desta forma nao perdemos nosso escopo e o this acesso o nome normalmente
         // Podemos ver no main o que o arrow fez
-        this._friends.forEach(function (f) {
-            return console.log(_this._name + "knows" + f);
-        });
+        this._friends.forEach(f => console.log(this._name + "knows" + f))
+        ;
     }
 };
 bob.printFriends();
-
+*/
 // ----------FIM TERCEIRO EXEMPLO------------------------------------------------------------------
+
+
+// ----------Aula CLASS----------------------------------------------------------------------
+var Color = function () {
+    function Color(codeColor, nameColor) {
+        _classCallCheck(this, Color);
+
+        // atributo
+        this.codeColor = codeColor;
+        this.nameColor = nameColor;
+    }
+
+    // Método retornando um objeto
+
+
+    _createClass(Color, [{
+        key: "getColor",
+        value: function getColor() {
+            return { codeColor: this.codeColor, nameColor: this.nameColor };
+        }
+    }]);
+
+    return Color;
+}();
+
+// let no es6 é utilizado para criar variaveis pertecentes ao scope
+
+
+var red = new Color("red", "Red");
+console.log(red.getColor());
