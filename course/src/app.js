@@ -73,7 +73,7 @@ bob.printFriends();
 
 
 // ----------Aula CLASS----------------------------------------------------------------------
-class Color{
+/*class Color{
     constructor(codeColor, nameColor){
         // atributo
         this.codeColor = codeColor;
@@ -89,3 +89,32 @@ class Color{
 // let no es6 é utilizado para criar variaveis pertecentes ao scope
 let red = new Color("red", "Red");
 console.log(red.getColor());
+*/
+// ---------- Fim Aula CLASS----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula STRING TEMPLATE----------------------------------------------------------------------
+//-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
+let name = "Guilherme";
+let age = 19;
+
+//let text = "name: " + name + " age: " + age;
+//console.log(text);
+//--------------------------AGORA COM ES 6------------------------------------------------------
+// UTILIZAR ASPAS PARA COLOCAR O CONTEUDO QUE QUEREMOS DENTRO
+// JA AS VARIAVEIS PEGAMOS COM CHAVES
+let text =`
+name: ${ name }
+age: ${ age }`;
+    console.log(text);

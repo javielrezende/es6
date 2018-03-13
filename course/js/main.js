@@ -1,9 +1,5 @@
 "use strict";
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 // ----------Aula ARROWS FUNCTION----------------------------------------------------------------------
 // ----------PRIMEIRO EXEMPLO SEM ES6----------------------------------------------------------------------
 /*
@@ -70,30 +66,35 @@ bob.printFriends();
 
 
 // ----------Aula CLASS----------------------------------------------------------------------
-var Color = function () {
-    function Color(codeColor, nameColor) {
-        _classCallCheck(this, Color);
-
+/*class Color{
+    constructor(codeColor, nameColor){
         // atributo
         this.codeColor = codeColor;
         this.nameColor = nameColor;
     }
 
     // Método retornando um objeto
-
-
-    _createClass(Color, [{
-        key: "getColor",
-        value: function getColor() {
-            return { codeColor: this.codeColor, nameColor: this.nameColor };
-        }
-    }]);
-
-    return Color;
-}();
+    getColor(){
+        return {codeColor: this.codeColor, nameColor: this.nameColor};
+    }
+}
 
 // let no es6 é utilizado para criar variaveis pertecentes ao scope
-
-
-var red = new Color("red", "Red");
+let red = new Color("red", "Red");
 console.log(red.getColor());
+*/
+// ---------- Fim Aula CLASS----------------------------------------------------------------------
+
+
+// ----------Aula STRING TEMPLATE----------------------------------------------------------------------
+//-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
+var name = "Guilherme";
+var age = 19;
+
+//let text = "name: " + name + " age: " + age;
+//console.log(text);
+//--------------------------AGORA COM ES 6------------------------------------------------------
+// UTILIZAR ASPAS PARA COLOCAR O CONTEUDO QUE QUEREMOS DENTRO
+// JA AS VARIAVEIS PEGAMOS COM CHAVES
+var text = "\nname: " + name + "\nage: " + age;
+console.log(text);
