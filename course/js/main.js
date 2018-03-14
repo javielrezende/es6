@@ -1,15 +1,5 @@
 "use strict";
 
-var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 // ----------Aula ARROWS FUNCTION----------------------------------------------------------------------
 // ----------PRIMEIRO EXEMPLO SEM ES6----------------------------------------------------------------------
 /*
@@ -151,48 +141,68 @@ console.log(i);
 
 // ----------Aula CLASSES----------------------------------------------------------------------
 //-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
-var People = function () {
-    function People(name, email, phone) {
-        _classCallCheck(this, People);
-
+/*
+class People{
+    constructor(name, email, phone){
         this.name = name;
         this.email = email;
         this.phone = phone;
     }
 
-    _createClass(People, [{
-        key: "toString",
-        value: function toString() {
-            return "Name: " + this.name + "\n        Email: " + this.email + "\n        Phone: " + this.phone + "\n        ";
-        }
-    }]);
+    toString(){
+        return `Name: ${this.name}
+        Email: ${this.email}
+        Phone: ${this.phone}
+        `;
+}
+}
 
-    return People;
-}();
-
-var Client = function (_People) {
-    _inherits(Client, _People);
-
-    function Client(id, name, email, phone) {
-        _classCallCheck(this, Client);
-
-        var _this = _possibleConstructorReturn(this, (Client.__proto__ || Object.getPrototypeOf(Client)).call(this, name, email, phone));
-
-        _this.id = id;
-        return _this;
+class Client extends People{
+constructor(id, name, email, phone){
+    super(name, email, phone);
+    this.id = id;
     }
-
-    _createClass(Client, [{
-        key: "toString",
-        value: function toString() {
-            return "id: " + this.id + "\n    " + _get(Client.prototype.__proto__ || Object.getPrototypeOf(Client.prototype), "toString", this).call(this) + "\n    ";
-        }
-    }]);
-
-    return Client;
-}(People);
-
+    toString(){
+    return`id: ${this.id}
+    ${super.toString()}
+    `
+    }
+}
 var test = new Client(1, "Guikherme", "guilherme@email.com", "2234442");
 
 console.log(test.toString());
-//--------------------------AGORA COM ES 6------------------------------------------------------
+*/
+
+// ----------Aula SET DATA STRUTURE----------------------------------------------------------------------
+
+var color = new Set();
+color.add("red").add("green").add("red");
+
+// has serve para verificar se existe aquela informacao, no caso vermelho
+if (color.size === 2 && color.has("red")) {
+    // values pega s valores que estao adicionados dentro do set
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = color.values()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var key = _step.value;
+
+            console.log(key);
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
+};

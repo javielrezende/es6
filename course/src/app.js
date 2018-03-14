@@ -198,6 +198,7 @@ console.log(i);
 
 // ----------Aula CLASSES----------------------------------------------------------------------
 //-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
+/*
 class People{
     constructor(name, email, phone){
         this.name = name;
@@ -227,5 +228,34 @@ constructor(id, name, email, phone){
 var test = new Client(1, "Guikherme", "guilherme@email.com", "2234442");
 
 console.log(test.toString());
-//--------------------------AGORA COM ES 6------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula SET DATA STRUTURE----------------------------------------------------------------------
+
+let color = new Set();
+color.add("red").add("green").add("red");
+
+// has serve para verificar se existe aquela informacao, no caso vermelho
+if(color.size === 2 && color.has("red")){
+    // values pega s valores que estao adicionados dentro do set
+for(let key of color.values()){
+console.log(key);
+}
+};
+
 
