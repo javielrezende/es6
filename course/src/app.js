@@ -246,7 +246,7 @@ console.log(test.toString());
 
 
 // ----------Aula SET DATA STRUTURE----------------------------------------------------------------------
-
+/*
 let color = new Set();
 color.add("red").add("green").add("red");
 
@@ -258,4 +258,47 @@ console.log(key);
 }
 };
 
+*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula FORMATACAO DE NUMEROS----------------------------------------------------------------------
+// Primeiramente criamos um index.html naraiz do projeto(course)
+// Somente para mostrar a formatação para web...
+/*
+var number = 123456.34;
+var En = new Intl.NumberFormat('en-US').format(number);
+var De = new Intl.NumberFormat('de-DE').format(number);
+
+console.log(En);
+console.log(De);
+*/
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula FORMATACAO DE NUMEROS----------------------------------------------------------------------
