@@ -146,7 +146,12 @@ function test(valueA) {
     var valueB = arguments.length <=1 || arguments[1] ===  undefined ? 4 : arguments[1];
     return valueA + valueB;
 }
-console.log(test(2, 2));
+//console.log(test(2, 2));
+
+//--------------------------AGORA COM ES 6------------------------------------------------------
+function test(valueA, ValueB = 4) {
+       console.log(test(2));
+}
 */
 
 
@@ -165,3 +170,35 @@ console.log(test(2, 2));
 
 // ----------Aula VAR OF----------------------------------------------------------------------
 //-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
+/*
+var list = ["test", 34, {name: "Guilherme"}];
+for(var i in list){
+    // Quando fazemos um for, ao imprimir o i ele nos tras o valor do indice
+    //console.log(i);
+    // Para imprimirmos o valor do i temos que:
+    //console.log(list[i]);
+}
+//--------------------------AGORA COM ES 6------------------------------------------------------
+for(let i of list){
+    // Agora com es 6, utilizando o OF ao imprimir o i ele nos tras o valor do array e nao mais o indice
+console.log(i);
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula VAR OF----------------------------------------------------------------------
+//-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
+
+
+//--------------------------AGORA COM ES 6------------------------------------------------------
+
