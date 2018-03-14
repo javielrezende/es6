@@ -1,5 +1,3 @@
-"use strict";
-
 // ----------Aula ARROWS FUNCTION----------------------------------------------------------------------
 // ----------PRIMEIRO EXEMPLO SEM ES6----------------------------------------------------------------------
 /*
@@ -103,25 +101,19 @@ age: ${ age }`;
     console.log(text);
 */
 
+/*
 // ----------Aula VALORES DEFAULT----------------------------------------------------------------------
 //-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
 // Funcao para, no caso de ter dois parametros, e quer saber se foi recebido os dois
-/*
 function test(valueA) {
     // arguments faz um teste para saber se recebeu somente o primeiro argumento
     // Se 2a pos do array de arguments for indefinido valor default é 4, senao sera o valor dele mesmo
-    var valueB = arguments.length <= 1 || arguments[1] === undefined ? 4 : arguments[1];
+    var valueB = arguments.length <=1 || arguments[1] ===  undefined ? 4 : arguments[1];
     return valueA + valueB;
 }
 console.log(test(2, 2));
 */
-//--------------------------AGORA COM ES 6------------------------------------------------------
-// Aqui precisamos apenas colocar um valor predefinido no segundo argumento
-/*
-function test(valueA, valueB = 4) {
-    return valueA + valueB;
-}
 
-console.log(test(2, 2));
-*/
-
+// ----------Aula VAR OF----------------------------------------------------------------------
+//-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
+"use strict";

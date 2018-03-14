@@ -136,7 +136,7 @@ age: ${ age }`;
 
 
 
-
+/*
 // ----------Aula VALORES DEFAULT----------------------------------------------------------------------
 //-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
 // Funcao para, no caso de ter dois parametros, e quer saber se foi recebido os dois
@@ -147,3 +147,21 @@ function test(valueA) {
     return valueA + valueB;
 }
 console.log(test(2, 2));
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula VAR OF----------------------------------------------------------------------
+//-----------ANTES DO ES 6 ERA FEITO ASSIM-----------------------------------------------------------
