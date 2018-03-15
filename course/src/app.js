@@ -336,4 +336,35 @@ console.log(BRL);
 
 
 
-// ----------Aula FORMATACAO DE MOEDAS----------------------------------------------------------------------
+// ----------Aula FORMATACAO DE DATAS----------------------------------------------------------------------
+
+/*var US = new Intl.DateTimeFormat("en-US");
+var BR = new Intl.DateTimeFormat("pt-BR");
+
+console.log(US.format(new Date("2016-05-10")));
+console.log(BR.format(new Date("2016-05-10")));
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula FORMATACAO DE DATAS----------------------------------------------------------------------
