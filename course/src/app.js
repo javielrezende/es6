@@ -281,7 +281,8 @@ console.log(key);
 
 // ----------Aula FORMATACAO DE NUMEROS----------------------------------------------------------------------
 // Primeiramente criamos um index.html naraiz do projeto(course)
-// Somente para mostrar a formatação para web...
+// Somente para mostrar a formatação para browser...
+// Aqui no terminal nao aparece a diferença
 /*
 var number = 123456.34;
 var En = new Intl.NumberFormat('en-US').format(number);
@@ -301,4 +302,38 @@ console.log(De);
 
 
 
-// ----------Aula FORMATACAO DE NUMEROS----------------------------------------------------------------------
+// ----------Aula FORMATACAO DE MOEDAS----------------------------------------------------------------------
+// Formatação em dolar
+// Currency = moeda
+// o metodo .format é usado para entrar com o numero
+// Pode ser usado com duas formas, como logo em baixo
+/*
+var USD = new Intl.NumberFormat("en-US", {style:"currency", currency:"USD"});
+// Formatação em reais
+var BRL = new Intl.NumberFormat("pt-BR", {style:"currency", currency:"BRL"}).format(1192837.40);
+
+console.log(USD.format(1192837.40));
+console.log(BRL);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------Aula FORMATACAO DE MOEDAS----------------------------------------------------------------------
